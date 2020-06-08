@@ -6,7 +6,8 @@ To benefit from this when using a std::vector, use
 ```
   std::vector< float, cuda_host_allocator< float >> numbers( 10 );
 ```
-to define your std::vector. The memory of the std::vector will then be allocated with cudaMallocHost.
+to define your std::vector. The memory of the std::vector will then be allocated with cudaMallocHost()
+and will transfer faster when using cudaMemcpy().
 Both the .allocate() and .deallocate() member functions of the cuda_host_allocator class throw 
 a std::bad_alloc when the allocation fails.
  
