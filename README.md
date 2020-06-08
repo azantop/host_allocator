@@ -10,4 +10,5 @@ to define your std::vector. The memory of the std::vector will then be allocated
 and will transfer faster when using cudaMemcpy().
 Both the .allocate() and .deallocate() member functions of the cuda_host_allocator class throw 
 a std::bad_alloc when the allocation fails.
- 
+
+The .hpp file can be compiled with a c++ compiler while only the .cpp requires nvcc for compilation.
